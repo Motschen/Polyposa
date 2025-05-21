@@ -1,0 +1,53 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"texture_size": [64, 32],
+	"textures": {
+		"0": "mariposa:entity/signs/hanging/sequoia",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"name": "board",
+			"from": [1, 0, 7],
+			"to": [15, 10, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0.5, 7, 4, 12], "texture": "#0"},
+				"east": {"uv": [0, 7, 0.5, 12], "texture": "#0"},
+				"south": {"uv": [4.5, 7, 8, 12], "texture": "#0"},
+				"west": {"uv": [4, 7, 4.5, 12], "texture": "#0"},
+				"up": {"uv": [4, 7, 0.5, 6], "texture": "#0"},
+				"down": {"uv": [7.5, 6, 4, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "plank",
+			"from": [0, 13.95, 6],
+			"to": [16, 15.95, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -0.1, 8]},
+			"faces": {
+				"north": {"uv": [1, 2, 5, 3], "texture": "#0"},
+				"east": {"uv": [0, 2, 1, 3], "texture": "#0"},
+				"south": {"uv": [6, 2, 10, 3], "texture": "#0"},
+				"west": {"uv": [5, 2, 6, 3], "texture": "#0"},
+				"up": {"uv": [5, 2, 1, 0], "texture": "#0"},
+				"down": {"uv": [9, 0, 5, 2], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "board",
+			"origin": [0, 10, 0],
+			"color": 0,
+			"children": [0]
+		},
+		{
+			"name": "plank",
+			"origin": [0, 10, 0],
+			"color": 0,
+			"children": [1]
+		}
+	]
+}

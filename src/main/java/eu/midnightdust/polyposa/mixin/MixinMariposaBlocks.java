@@ -38,6 +38,8 @@ public interface MixinMariposaBlocks {
             case "sequoia_door" -> PolymerDoorBlock::new;
             case "sequoia_trapdoor" -> PolymerTrapdoorBlock::new;
             case "sequoia_pressure_plate" -> (set) -> new PolymerPressurePlate(SEQUOIA_WOOD_TYPE.setType(), set, Blocks.MANGROVE_PRESSURE_PLATE);
+            case "sequoia_wall_hanging_sign" -> (set) -> new PolymerWallHangingSignBlock(WoodType.OAK, set, Blocks.MANGROVE_WALL_HANGING_SIGN);
+            case "sequoia_hanging_sign" -> (set) -> new PolymerHangingSignBlock(WoodType.OAK, set, Blocks.MANGROVE_HANGING_SIGN);
             case "sequoia_wall_sign" -> (set) -> new PolymerWallSignBlock(WoodType.OAK, set, Blocks.MANGROVE_WALL_SIGN);
             case "sequoia_sign" -> (set) -> new PolymerSignBlock(WoodType.OAK, set, Blocks.MANGROVE_SIGN);
             case "sequoia_leaves" -> SequoiaPolymerLeaves::new;

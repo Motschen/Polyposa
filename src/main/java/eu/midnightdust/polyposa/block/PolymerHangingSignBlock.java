@@ -11,15 +11,16 @@ import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RotationPropertyHelper;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 import xyz.nucleoid.packettweaker.PacketContext;
 
-public class PolymerWallSignBlock extends WallSignBlock implements FactoryBlock {
+public class PolymerHangingSignBlock extends HangingSignBlock implements FactoryBlock {
     private final Identifier id;
     private final Block template;
 
-    public PolymerWallSignBlock(WoodType woodType, Settings settings, Block template) {
+    public PolymerHangingSignBlock(WoodType woodType, Settings settings, Block template) {
         super(woodType, settings);
         this.template = template;
         id = Identifier.tryParse(this.getTranslationKey().replace("block.", "").replace(".", ":"));
@@ -27,12 +28,12 @@ public class PolymerWallSignBlock extends WallSignBlock implements FactoryBlock 
 
     @Override
     public BlockState getPolymerBlockState(BlockState state, PacketContext packetContext) {
-        return template.getDefaultState().with(FACING, state.get(FACING)).with(WATERLOGGED, state.get(WATERLOGGED));
+        return template.getDefaultState().with(ROTATION, state.get(ROTATION)).with(WATERLOGGED, state.get(WATERLOGGED));
     }
 
     @Override
     public @Nullable ElementHolder createElementHolder(ServerWorld world, BlockPos pos, BlockState initialBlockState) {
-        return new PolymerWallSignBlock.Model(initialBlockState, id);
+        return new PolymerHangingSignBlock.Model(initialBlockState, id);
     }
 
     public static final class Model extends BlockModel {
@@ -44,10 +45,10 @@ public class PolymerWallSignBlock extends WallSignBlock implements FactoryBlock 
             addElement(main);
         }
         private void updateItem(BlockState state) {
-            float scale = 1.0075f;
-            main.setScale(new Vector3f(scale*1.3333334f));
-            main.setTranslation(new Vector3f(0, -0.4825f, -0.1435f));
-            main.setYaw(state.get(FACING).getPositiveHorizontalDegrees());
+            float scale = 1.0025f;
+            main.setScale(new Vector3f(scale*2f));
+            main.setTranslation(new Vector3f(0, 0, 0));
+            main.setYaw(RotationPropertyHelper.toDegrees(state.get(ROTATION)));
         }
 
         @Override

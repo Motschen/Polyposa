@@ -3,6 +3,10 @@
         {
             "type": "single",
             "resource": "mariposa:entity/signs/sequoia"
+        },
+        {
+            "type": "single",
+            "resource": "mariposa:entity/signs/hanging/sequoia"
         }
     ]
 }

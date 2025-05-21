@@ -28,7 +28,7 @@ public class PolymerSignBlock extends SignBlock implements FactoryBlock {
 
     @Override
     public BlockState getPolymerBlockState(BlockState state, PacketContext packetContext) {
-        return template.getDefaultState().with(ROTATION, state.get(ROTATION));
+        return template.getDefaultState().with(ROTATION, state.get(ROTATION)).with(WATERLOGGED, state.get(WATERLOGGED));
     }
 
     @Override
