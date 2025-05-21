@@ -1,0 +1,8 @@
+{
+    "sources": [
+        {
+            "type": "single",
+            "resource": "mariposa:entity/signs/sequoia"
+        }
+    ]
+}

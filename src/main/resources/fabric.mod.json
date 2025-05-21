@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "polyposa",
+  "version": "${version}",
+
+  "name": "Mariposa (Polymer Patch)",
+  "description": "",
+  "authors": [
+    "Motschen"
+  ],
+  "contact": {
+    "homepage": "https://www.midnightdust.eu/",
+    "issues": "https://github.com/TeamMidnightDust/ThisRocksPolymer/issues"
+  },
+
+  "license": "MIT",
+  "icon": "assets/rocks/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "eu.midnightdust.polyposa.PolymerMariposaMain"
+    ]
+  },
+
+  "mixins": [
+    "polyposa.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.2",
+    "fabric": "*",
+    "mariposa": ">=1.0.3-1.21.5"
+  }
+}

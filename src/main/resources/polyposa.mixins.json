@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "eu.midnightdust.polyposa.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinMariposaBlocks",
+    "MixinMariposaItems"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
